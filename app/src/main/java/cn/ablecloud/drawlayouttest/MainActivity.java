@@ -19,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jaeger.library.StatusBarUtil;
+
 /**
  * ToolBar自定义图标，关联DrawerLayout
  * http://blog.csdn.net/static_zh/article/details/52621240
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        StatusBarUtil.setColorForDrawerLayout(MainActivity.this, drawer, getResources().getColor(R.color.colorAccent));
         right = (CoordinatorLayout) findViewById(R.id.right);
         leftView = (LinearLayout) findViewById(R.id.left_view);
         logout = (TextView) findViewById(R.id.tv_logout);
